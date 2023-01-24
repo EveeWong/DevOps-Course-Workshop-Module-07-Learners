@@ -27,3 +27,11 @@ jobs:
 
       - name: Test with the dotnet CLI
         run: dotnet test
+
+      - name: NPM Install
+        working-directory: ./DotnetTemplate.Web
+        run: npm install
+
+      - name: Run build
+        working-directory: ./DotnetTemplate.Web
+        run: npm run build
